@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+a<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -69,7 +69,86 @@
                 <h1 class="page-header">About Us
                     <small>It's Nice to Meet You!</small>
                 </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, explicabo dolores ipsam aliquam inventore corrupti eveniet quisquam quod totam laudantium repudiandae obcaecati ea consectetur debitis velit facere nisi expedita vel?</p>
+                <p>This app is designed to collect information for a research study at the University of California, Berkeley. The study is being led by K. Shankari under the supervision of Prof. Susan Shaheen. The goal of the study is to understand people's travel behavior and mode usage as people commute to trip generators. We will use this information to make recommendations for changes that can reduce emissions.</p>
+            </div>
+        </div>
+        
+        <!-- Benefits -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Benefits</h2>
+            </div>
+            <div class="col-lg-12">
+                <p>There are no direct benefits to you for enrolling in the study. However, we will use this information to provide you with a personalized carbon footprint for travel that can be compared with the average carbon footprint of our users, and with statewide goals for emission reduction. In addition, we will use the aggregate data to recommend structural changes and incentives for more energy efficient transportation.</p>
+            </div>
+        </div>
+        
+        <!-- Procedures -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Procedures</h2>
+            </div>
+            <div class="col-lg-12">
+                <p>We will automatically track your location and use it to generate a list of trips that you made, and the route for the trip. We will attempt to automatically determine the mode (walk/bike/car/train/bus/air) for the trip, and prompt you for confirmation. You confirm trips directly from your phone - confirming a trip should take no more than a couple of seconds. Since this is a long-term, longitudinal study, we will continue to collect data as long as the apps are installed. In order to withdraw from the study temporarily, you can turn off data collection in Moves. In order to withdraw permanently, you can uninstall both the Moves and E-Mission apps.</p>
+            </div>
+        </div>
+        
+        <!-- Risks/Discomforts -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Risks/Discomforts</h2>
+            </div>
+            <div class="col-lg-12">
+                <p>As with all research, there is a chance that confidentiality could be compromised; however, we are taking precautions to minimize this risk as described below. The biggest complaint that we have had from our beta testers is the battery drain on the phone. This seems to be a particular concern for iOS users. The "Battery Saving" mode in Moves (M -> Settings -> Tracking Priority) seems to help significantly.</p>
+            </div>
+        </div>
+        
+        <!-- Confidentiality -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Confidentiality</h2>
+            </div>
+            <div class="col-lg-12">
+                <p>We understand that location data can be sensitive, and we have taken several precautions related to the security of your data. In particular</p>
+                <ol>
+                <li>All communication with our server is encrypted.</li>
+                <li>We divide our endpoints into ones that expose personally identifiable information (PII) (such as your personal carbon footprint) and ones which expose aggregate information (such as the carbon footprint of UC Berkeley). All endpoints which expose PII have a "user" field in the request that is used for authentication.</li>
+                <li>We use your gmail ID for authentication in order to avoid the risks associated with storing passwords. If you wish to remain completely anonymous, you can create a separate gmail address only for this app.</li>
+                <li>The trip data is associated with unique user IDs, not with the gmail addresses. The mapping from the userIDs to the gmail addresses is done through a separate table. The lead researcher (Shankari) is the only person who has access to the database, for both the trip and user access tables. Other researchers will only have access to data from the trip database, exported by the lead researcher, but without the linked gmail addresses.</li>
+                <li>The server on which the web app is running is protected by a firewall which only exposes the Secure Shell (SSH) and HTTPS ports - the database cannot be accessed directly from outside the host. The SSH server on the host is configured to only support public key authentication, and the only user with access to the private key for the server is the lead researcher (Shankari).</li>
+                </ol>
+                <p>The server on which the web app is running is protected by a firewall which only exposes the Secure Shell (SSH) and HTTPS ports - the database cannot be accessed directly from outside the host. The SSH server on the host is configured to only support public key authentication, and the only user with access to the private key for the server is the lead researcher (Shankari).</p>
+                <p>Note, however, that we integrate with a third party app - Moves - to collect the data. Moves has its own policies on data collection, privacy and storage. At the end of the study, we plan to destroy the table linking email addresses with the uuids. The trip table containing user UUIDs along with the list of trips will be retained as a travel pattern dataset for ongoing research. The travel pattern dataset will be available by request only, and researchers will be asked to agree that they will publish only aggregate, non personally identifiable results, and will not re-share the data with others. It will not be used for marketing or advertising purposes. Please note that Moves was recently acquired by Facebook, so data collected by Moves is searchable by Facebook. You do not have to provide your Facebook ID to use either Moves or E-Mission, so there is no explicit link between the data collected and your Facebook identity. We communicate with Moves over SSL, using an access token for authentication.</p>
+            </div>
+        </div>
+        
+        <!-- Compensation -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Compensation</h2>
+            </div>
+            <div class="col-lg-12">
+                <p>You will not be paid for taking part in this study.</p>
+            </div>
+        </div>
+        
+        <!-- Rights -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Rights</h2>
+            </div>
+            <div class="col-lg-12">
+                <p><b><i>Participation in research is completely voluntary.</i></b> You have the right to decline to participate or to withdraw at any point in this study without penalty or loss of benefits to which you are otherwise entitled.</p>
+            </div>
+        </div>
+        
+        <!-- Questions -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Questions</h2>
+            </div>
+            <div class="col-lg-12">
+                If you have any questions about this research, please feel free to contact us. For the quickest response, you can send email to the entire team at <a href="mailto:e-mission@lists.eecs.berkeley.edu">e-mission@lists.eecs.berkeley.edu</a>. If you want to contact only the lead researcher or the PI, you can use their profiles above. If you have any questions about your rights or treatment as a research participant in this study, please contact the University of California at Berkeley's Committee for Protection of Human Subjects at 510-642-7461, or e-mail <a href="mailto:subjects@berkeley.edu">subjects@berkeley.edu</a>. If you agree to take part in the research, please click "I agree" below to proceed. If you do not wish to take part in the research, please click "I disagree" below to exit the app. This notice is also available online in case you need to read it again in the future.
             </div>
         </div>
 
@@ -123,12 +202,22 @@
         </div>
 
         <hr>
+        
+        <!-- Acknowledgements -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Acknowledgements</h2>
+            </div>
+            <div class="col-lg-12">
+                Shankari is honored to have been supported by the Jim Gray Fellowship for the duration of this project. Jim Gray, who did pioneering work on the management of large amounts of data, disappeared while sailing in San Francisco Bay in 2007. We like to think that this work, which aims to use large amounts of data to understand and influence travel patterns, is something that he would have found interesting.
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; E-Mission 2014</p>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
